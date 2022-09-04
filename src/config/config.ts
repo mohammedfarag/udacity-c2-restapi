@@ -1,22 +1,22 @@
 export const config = {
-  "dev": {
-    "username": "",
-    "password": "",
-    "database": "",
-    "host": "",
-    "dialect": "postgres",
-    "aws_region": "us-east-2",
-    "aws_profile": "default",
-    "aws_media_bucket": "udagram-ruttner-dev"
+  dev: {
+    username: process.env.FWD_POSTGRESS_USERNAM,
+    password: process.env.FWD_POSTGRESS_PASSWORD,
+    database: process.env.FWD_POSTGRESS_DATABASE,
+    host: process.env.FWD_POSTGRESS_HOST,
+    dialect: process.env.FWD_POSTGRESS_DIALECT,
+    aws_region: process.env.FWD_AWS_REGION,
+    aws_profile: process.env.FWD_AWS_PROFILE,
+    aws_media_bucket: process.env.FWD_BUCKET,
   },
-  "jwt": {
-    "secret": " "
+  jwt: {
+    secret: " ",
   },
-  "prod": {
-    "username": "",
-    "password": "",
-    "database": "udagram_prod",
-    "host": "",
-    "dialect": "postgres"
-  }
-}
+  prod: {
+    username: "",
+    password: "",
+    database: "udagram_prod",
+    host: "",
+    dialect: "postgres",
+  },
+};
