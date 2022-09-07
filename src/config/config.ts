@@ -10,7 +10,7 @@ export const config = {
     aws_media_bucket: process.env.FWD_BUCKET,
   },
   jwt: {
-    secret: " ",
+    secret: process.env.FWD_JWT_SECRET,
   },
   prod: {
     username: "",
